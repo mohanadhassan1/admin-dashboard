@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
+import { useState } from "react";
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -64,9 +65,9 @@ export default function ProductList() {
 
   // const [formid, setFormid] = useState("");
 
-  useEffect(() => {
-    getProducts();
-  }, []);
+  // useEffect(() => {
+  //   getProducts();
+  // }, []);
 
   const getProducts = async () => {
     const data = await getDocs(empCollectionRef);
