@@ -28,8 +28,8 @@ import Autocomplete from "@mui/material/Autocomplete";
 
 import Modal from '@mui/material/Modal';
 
-import AddProduct from "./AddProduct";
-import EditProduct from "./EditProduct";
+// import AddProduct from "./AddProduct";
+// import EditProduct from "./EditProduct";
 import { useAppStore } from '../../AppStore';
 
 
@@ -134,7 +134,7 @@ export default function ProductList() {
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
-            <AddProduct closeEvent={handleClose} />
+            {/* <AddProduct closeEvent={handleClose} /> */}
           </Box>
         </Modal>
 
@@ -144,7 +144,7 @@ export default function ProductList() {
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
-            <EditProduct closeEvent={handleEditClose} fid={formid} />
+            {/* <EditProduct closeEvent={handleEditClose} fid={formid} /> */}
           </Box>
         </Modal>
       </div>
