@@ -55,14 +55,14 @@ export default function ProductList() {
   const empCollectionRef = collection(db, "products");
 
   const [open, setOpen] = useState(false);
-  const [editopen, setEditOpen] = useState(false);
+  // const [editopen, setEditOpen] = useState(false);
 
   const handleOpen = () => setOpen(true);
-  const handleEditOpen = () => setEditOpen(true);
-  const handleClose = () => setOpen(false);
-  const handleEditClose = () => setEditOpen(false);
+  // const handleEditOpen = () => setEditOpen(true);
+  // const handleClose = () => setOpen(false);
+  // const handleEditClose = () => setEditOpen(false);
 
-  const [formid, setFormid] = useState("");
+  // const [formid, setFormid] = useState("");
 
   useEffect(() => {
     getProducts();
@@ -114,16 +114,16 @@ export default function ProductList() {
     }
   };
 
-  const editProduct = (id, name, price, category) => {
-    const data = {
-      id: id,
-      name: name,
-      price: price,
-      category: category,
-    }
-    setFormid(data);
-    handleEditOpen();
-  }
+  // const editProduct = (id, name, price, category) => {
+    // const data = {
+    //   id: id,
+    //   name: name,
+    //   price: price,
+    //   category: category,
+    // }
+    // setFormid(data);
+    // handleEditOpen();
+  // }
 
   return (
     <>
@@ -140,7 +140,7 @@ export default function ProductList() {
         </Modal>
 
         <Modal
-          open={editopen}
+          // open={editopen}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
@@ -242,7 +242,7 @@ export default function ProductList() {
                             }}
                             className="cursor-pointer"
                             onClick={() => {
-                              editProduct(row.id, row.name, row.price, row.category)
+                              // editProduct(row.id, row.name, row.price, row.category)
                             }}
                           />
                           <DeleteIcon
