@@ -1,5 +1,4 @@
-// import { useState, useEffect } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -29,8 +28,8 @@ import Autocomplete from "@mui/material/Autocomplete";
 
 import Modal from '@mui/material/Modal';
 
-// import AddProduct from "./AddProduct";
-// import EditProduct from "./EditProduct";
+import AddProduct from "./AddProduct";
+import EditProduct from "./EditProduct";
 import { useAppStore } from '../../AppStore';
 
 
@@ -56,18 +55,18 @@ export default function ProductList() {
   const empCollectionRef = collection(db, "products");
 
   const [open, setOpen] = useState(false);
-  // const [editopen, setEditOpen] = useState(false);
+  const [editopen, setEditOpen] = useState(false);
 
   const handleOpen = () => setOpen(true);
-  // const handleEditOpen = () => setEditOpen(true);
-  // const handleClose = () => setOpen(false);
-  // const handleEditClose = () => setEditOpen(false);
+  const handleEditOpen = () => setEditOpen(true);
+  const handleClose = () => setOpen(false);
+  const handleEditClose = () => setEditOpen(false);
 
-  // const [formid, setFormid] = useState("");
+  const [formid, setFormid] = useState("");
 
-  // useEffect(() => {
-  //   getProducts();
-  // }, []);
+  useEffect(() => {
+    getProducts();
+  }, []);
 
   const getProducts = async () => {
     const data = await getDocs(empCollectionRef);
@@ -115,16 +114,16 @@ export default function ProductList() {
     }
   };
 
-  // const editProduct = (id, name, price, category) => {
-    // const data = {
-    //   id: id,
-    //   name: name,
-    //   price: price,
-    //   category: category,
-    // }
-    // setFormid(data);
-    // handleEditOpen();
-  // }
+  const editProduct = (id, name, price, category) => {
+    const data = {
+      id: id,
+      name: name,
+      price: price,
+      category: category,
+    }
+    setFormid(data);
+    handleEditOpen();
+  }
 
   return (
     <>
@@ -141,7 +140,7 @@ export default function ProductList() {
         </Modal>
 
         <Modal
-          // open={editopen}
+          open={editopen}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
@@ -243,7 +242,7 @@ export default function ProductList() {
                             }}
                             className="cursor-pointer"
                             onClick={() => {
-                              // editProduct(row.id, row.name, row.price, row.category)
+                              editProduct(row.id, row.name, row.price, row.category)
                             }}
                           />
                           <DeleteIcon
