@@ -23,7 +23,7 @@ export default function Settings() {
       <div className='bgcolor'>
         <NavBar />
 
-        <Box sx={{ width: 110 + "%", display: 'flex' }}>
+        <Box sx={{ width: 100 + "%", display: 'flex' }}>
 
           <SideNav />
 

@@ -135,7 +135,7 @@ export default function ProductList() {
         >
         {/* Check */}
           <Box sx={style}>
-            {/* <AddProduct closeEvent={handleClose} /> */}
+            <AddProduct closeEvent={handleClose} />
           </Box>
         </Modal>
 
@@ -145,7 +145,7 @@ export default function ProductList() {
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
-            {/* <EditProduct closeEvent={handleEditClose} fid={formid} /> */}
+            <EditProduct closeEvent={handleEditClose} fid={formid} />
           </Box>
         </Modal>
       </div>

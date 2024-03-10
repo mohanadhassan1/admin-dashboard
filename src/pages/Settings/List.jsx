@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
-// import { Box, stack, Card, CardContent } from '@mui/material'
 import { Box } from '@mui/material'
 import { styled } from '@mui/material/styles';
 import Personal from './Personal';
@@ -88,22 +87,21 @@ export default function List() {
 
     return (
         <Box sx={{ width: '100%' }}>
+            
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <StyledTabs value={value} onChange={handleChange} aria-label="basic tabs example">
                     <StyledTab label="Profile" {...a11yProps(0)} />
                     <StyledTab label="Personal" {...a11yProps(1)} />
-                    {/* <StyledTab label="Item Three" {...a11yProps(2)} /> */}
                 </StyledTabs>
-            </Box>
+            </Box> 
+
             <CustomTabPanel value={value} index={0}>
                 <Profile />
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
                 <Personal />
             </CustomTabPanel>
-            {/* <CustomTabPanel value={value} index={2}>
-                Item Three
-            </CustomTabPanel> */}
+            
         </Box>
     );
 }

@@ -34,7 +34,6 @@
   
   .bgcolor {
     min-height: 100vh;
-    min-width: 100%;
     background: #ECEFF1;
     background: linear-gradient(158deg, rgba(224, 224, 224) 0%, rgba(233, 237, 254) 100%);
   }
