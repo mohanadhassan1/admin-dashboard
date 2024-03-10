@@ -30,7 +30,7 @@ export default function Settings() {
           <Box component="main" sx={{ flexGrow: 1, p: 2 }}>
             <DrawerHeader />
 
-            <Card sx={{ minWidth: 345, height: 85 + "vh" }}>
+            <Card sx={{ minWidth: 345, height: 100 + "%" }}>
               <CardContent>
                 <List />
               </CardContent>
