@@ -133,7 +133,6 @@ export default function ProductList() {
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
-        {/* Check */}
           <Box sx={style}>
             <AddProduct closeEvent={handleClose} />
           </Box>

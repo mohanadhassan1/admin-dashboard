@@ -46,75 +46,83 @@ export default function Analytics() {
 
             <Grid container spacing={4}>
 
-              <Grid item xs={4}>
-                <Stack spacing={1} direction="row">
+              <Grid item xs={12} md={4}>
+                <Stack spacing={2} direction="row">
 
-                  <Card sx={{ minWidth: 205, height: 120 }} className='gradient'>
-                    <CardContent>
-                      <div className='visitorsStyle'>
-                        Visitors
-                      </div>
-                      <Typography gutterBottom variant="h5" component="div" sx={{ color: "#ffffff" }}>
-                        <CountUp delay={0.2} end={22000} duration={1} />
-                      </Typography>
-                      <Typography gutterBottom variant="body2" component="div" sx={{ color: "#ccd1d1" }}>
-                        Since Last Week
-                      </Typography>
-                    </CardContent>
-                  </Card>
+                  <Grid item xs={6} md={6}>
+                    <Card sx={{ minWidth: 205, height: 120 }} className='gradient'>
+                      <CardContent>
+                        <div className='visitorsStyle'>
+                          Visitors
+                        </div>
+                        <Typography gutterBottom variant="h5" component="div" sx={{ color: "#ffffff" }}>
+                          <CountUp delay={0.2} end={22000} duration={1} />
+                        </Typography>
+                        <Typography gutterBottom variant="body2" component="div" sx={{ color: "#ccd1d1" }}>
+                          Since Last Week
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Grid>
 
-                  <Card sx={{ minWidth: 205, height: 120 }} className='gradientlight'>
-                    <CardContent>
-                      <div className='visitorsStyle'>
-                        Visitors
-                      </div>
-                      <Typography gutterBottom variant="h5" component="div" sx={{ color: "#ffffff" }}>
-                        <CountUp delay={0.2} end={22000} duration={1} />
-                      </Typography>
-                      <Typography gutterBottom variant="body2" component="div" sx={{ color: "#ccd1d1" }}>
-                        Since Last Week
-                      </Typography>
-                    </CardContent>
-                  </Card>
+                  <Grid item xs={6} md={6}>
+                    <Card sx={{ minWidth: 205, height: 120 }} className='gradientlight'>
+                      <CardContent>
+                        <div className='visitorsStyle'>
+                          Visitors
+                        </div>
+                        <Typography gutterBottom variant="h5" component="div" sx={{ color: "#ffffff" }}>
+                          <CountUp delay={0.2} end={22000} duration={1} />
+                        </Typography>
+                        <Typography gutterBottom variant="body2" component="div" sx={{ color: "#ccd1d1" }}>
+                          Since Last Week
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Grid>
 
                 </Stack>
 
                 <Box height={10} />
 
-                <Stack spacing={1} direction="row">
+                <Stack spacing={2} direction="row">
 
-                  <Card sx={{ minWidth: 205, height: 120 }} className='gradient'>
-                    <CardContent>
-                      <div className='visitorsStyle'>
-                        Visitors
-                      </div>
-                      <Typography gutterBottom variant="h5" component="div" sx={{ color: "#ffffff" }}>
-                      <CountUp delay={0.2} end={32000} duration={1} />
-                      </Typography>
-                      <Typography gutterBottom variant="body2" component="div" sx={{ color: "#ccd1d1" }}>
-                        Since Last Week
-                      </Typography>
-                    </CardContent>
-                  </Card>
+                  <Grid item xs={6} md={6}>
+                    <Card sx={{ minWidth: 205, height: 120 }} className='gradient'>
+                      <CardContent>
+                        <div className='visitorsStyle'>
+                          Visitors
+                        </div>
+                        <Typography gutterBottom variant="h5" component="div" sx={{ color: "#ffffff" }}>
+                          <CountUp delay={0.2} end={32000} duration={1} />
+                        </Typography>
+                        <Typography gutterBottom variant="body2" component="div" sx={{ color: "#ccd1d1" }}>
+                          Since Last Week
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Grid>
 
-                  <Card sx={{ minWidth: 205, height: 120 }} className='gradientlight'>
-                    <CardContent>
-                      <div className='visitorsStyle'>
-                        Visitors
-                      </div>
-                      <Typography gutterBottom variant="h5" component="div" sx={{ color: "#ffffff" }}>
-                      <CountUp delay={0.2} end={32000} duration={1} />
-                      </Typography>
-                      <Typography gutterBottom variant="body2" component="div" sx={{ color: "#ccd1d1" }}>
-                        Since Last Week
-                      </Typography>
-                    </CardContent>
-                  </Card>
+                  <Grid item xs={6} md={6}>
+                    <Card sx={{ minWidth: 205, height: 120 }} className='gradientlight'>
+                      <CardContent>
+                        <div className='visitorsStyle'>
+                          Visitors
+                        </div>
+                        <Typography gutterBottom variant="h5" component="div" sx={{ color: "#ffffff" }}>
+                          <CountUp delay={0.2} end={32000} duration={1} />
+                        </Typography>
+                        <Typography gutterBottom variant="body2" component="div" sx={{ color: "#ccd1d1" }}>
+                          Since Last Week
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Grid>
 
                 </Stack>
               </Grid>
 
-              <Grid item xs={8}>
+              <Grid item xs={12} md={8}>
                 <Stack spacing={1}>
 
                   <Card sx={{ minWidth: 810, height: 250 }}>
@@ -132,7 +140,7 @@ export default function Analytics() {
 
             <Grid container spacing={2}>
 
-              <Grid item xs={8}>
+              <Grid item xs={12} md={8}>
                 <Card sx={{ height: 46 + "vh" }}>
                   <CardContent>
                     <GeoChart />
@@ -140,7 +148,7 @@ export default function Analytics() {
                 </Card>
               </Grid>
 
-              <Grid item xs={4}>
+              <Grid item xs={12} md={4}>
                 <Card sx={{ height: 46 + "vh" }}>
                   <CardContent>
                     <PieChart />
